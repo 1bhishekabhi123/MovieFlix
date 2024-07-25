@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #e9ecef;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #0056b3;
+    }
+  div{
+   height: 80vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  grid-auto-flow: row;
+  }
+  </style>
+</head>
+<body>
+<table border="1">
+<tr>
+<th>id</th>
+<th>Name</th>
+<th>email</th>
+<th>gender</th>
+<th>address</th>
+
+</tr>
+<tr th:each="users : ${users}">
+<td th:text="${users.id}"></td>
+<td th:text="${users.name}"></td>
+<td th:text="${users.email}"></td>
+<td th:text="${users.gender}"></td>
+<td th:text="${users.address}"></td>
+</tr>
+
+
+
+
+
+</table>
+<br><br>
+<div>
+<a href="admin-home">Admin Home</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: gray;
+     
+      height: 100vh;
+      margin: 0;
+      background-image: url('https://i.ytimg.com/vi/xS-gJydZXuM/maxresdefault.jpg');
+ 
+    }
+
+    .container {
+      text-align: center;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 10px;
+      transition: transform 0.3s ease;
+      width: 300px;
+      display: inline-block;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #444;
+      font-size: 18px;
+      display: block;
+      padding: 15px 0;
+      transition: color 0.3s ease;
+    }
+
+    .card a:hover {
+      color: #007bff;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    #bot{
+    text-align:center;
+    padding: 20px;
+      margin: 10px;
+      transition: transform 0.3s ease;
+       width: 300px;
+      display: inline-block;
+    }
+    button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+    
+  </style>
+</head>
+<body>
+<div class="container">
+<h1>Welcome admin</h1>
+<div class="card">
+<a href="get-user">View Users</a>
+</div>
+<div class="card">
+<a href="get-movie">Add movies</a>
+</div>
+<div class="card">
+<a href="view-movie">view movies</a>
+</div>
+</div>
+<div id="bot" >
+<a href="logout">
+<button type="submit">LogOut</button>
+</a>
+</div>
+</body>
+</html>

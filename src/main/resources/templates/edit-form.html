@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="radio"] {
+   
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+
+<div class="form-container">
+<h2>Update Your Profile</h2>
+<div th:each="user : ${user}">
+<form action="update-register" method="post">
+<label>Id</label>
+
+<input type="text" th:field="*{user.id}">
+<label>Name</label>
+
+<input type="text" th:field="*{user.name}">
+<label>Email-ID</label>
+<input type="text"th:field="*{user.email}">
+<label>Password</label>
+<input type="text" th:field="*{user.password}">
+<label>Gender</label>
+Male<input type="radio" th:field="*{user.gender}" value="Male">
+Female<input type="radio" th:field="*{user.gender}" value="Female">
+Other<input type="radio" th:field="*{user.gender}" value="Other">
+<label>Phone</label>
+<input type="number" th:field="*{user.phone}">
+<label>Address</label>
+<textarea rows="5" th:field="*{user.address}"></textarea>
+<input class="submit-button" type="submit" value="Update">
+
+	</form>
+</div>
+</div>
+</body>
+</html>

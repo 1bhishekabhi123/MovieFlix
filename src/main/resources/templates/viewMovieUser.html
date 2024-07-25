@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+.movie-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+gap:10px
+
+}
+#movie-item{
+padding:10px;
+border:1px;
+border:10px;
+
+
+}
+#movie-item iframe{
+width:100%;
+height:200px;
+}
+#box{
+text-align:center;
+
+}
+body{
+background-color:black;
+}
+h2{
+color:white;
+text-align:center;
+}
+button {
+  /* Basic button styles */
+  padding: 10px 20px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text color */
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color:red; /* Darker blue on hover */
+}
+
+
+</style>
+</head>
+<body>
+<h2>All Movies</h2>
+<div class="movie-grid">
+<div th:each="movies : ${movies}" id="movie-item">
+<h2 th:text="${movies.movieName}" ></h2>
+<div th:utext="${movies.movieLink}" id="link"> </div>
+ </div>
+
+
+</div>
+<br><br>
+<div id="box">
+<a href="back-to">
+<button type="submit">Back</button>
+</a>
+</div>
+
+</body>
+</html>

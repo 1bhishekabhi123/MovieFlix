@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.movies-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.movies-table th,
+.movies-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.movies-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.movies-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.movies-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+</style>
+
+</head>
+<body>
+<table border="1">
+<tr>
+<th>id</th>
+<th>Movie Name</th>
+<th>Movie Link</th>
+<th>Genre</th>
+<th>Cast</th>
+<th>Director</th>
+
+</tr>
+<tr th:each="movies : ${movies}">
+<td th:text="${movies.id}"></td>
+<td th:text="${movies.movieName}"></td>
+<td th:utext="${movies.movieLink}"></td>
+<td th:text="${movies.genre}"></td>
+<td th:text="${movies.cast}"></td>
+<td th:text="${movies.director}"></td>
+</tr>
+
+
+
+
+
+</table>
+
+</body>
+</html>
